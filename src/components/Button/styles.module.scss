@@ -1,0 +1,41 @@
+.button {
+  width: 100%;
+
+  &.borderRadius {
+    &-sm {
+      border-radius: var(--border-radius-sm);
+    }
+
+    &-md {
+      border-radius: var(--border-radius-md);
+    }
+
+    &-lg {
+      border-radius: var(--border-radius-lg);
+    }
+  }
+
+  &.height {
+    &-md {
+      height: 30px;
+    }
+
+    &-lg {
+      height: 42px;
+    }
+  }
+
+  &.variant {
+    &-cta {
+      background-color: var(--Button-cta-background-color);
+      border: 1px solid var(--Button-cta-border-color);
+      color: var(--Button-cta-color);
+    }
+
+    &-white {
+      background-color: var(--Button-white-background-color);
+      border: 1px solid var(--Button-white-border-color);
+      color: var(--Button-white-color);
+    }
+  }
+}

@@ -1,0 +1,123 @@
+.typography {
+  font-family: var(--font-primary-family);
+  
+  &.align {
+    &-left {
+      text-align: left;
+    }
+
+    &-center {
+      text-align: center;
+    }
+
+    &-inherit {
+      text-align: inherit
+    }
+
+    &-justify {
+      text-align: justify
+    }
+
+    &-right {
+      text-align: right;
+    }
+  }
+
+  &.variant {
+    &-h1,
+    &-h2,
+    &-h3,
+    &-h4,
+    &-h5,
+    &-h6 {
+      &.size {
+        &-xsm {
+          font-size: var(--font-heading-xsm);
+        }
+
+        &-sm {
+          font-size: var(--font-heading-sm);
+        }
+
+        &-md {
+          font-size: var(--font-heading-md);
+        }
+
+        &-lg {
+          font-size: var(--font-heading-lg);
+        }
+      }
+    }
+
+    &-p,
+    &-body {
+      &.size {
+        &-xsm {
+          font-size: var(--font-text-xsm);
+        }
+
+        &-sm {
+          font-size: var(--font-text-sm);
+        }
+
+        &-md {
+          font-size: var(--font-text-md);
+        }
+
+        &-lg {
+          font-size: var(--font-text-lg);
+        }
+      }
+    }
+
+    &-caption {
+      &.size {
+        &-xsm {
+          font-size: var(--font-caption-xsm);
+        }
+
+        &-sm {
+          font-size: var(--font-caption-sm);
+        }
+
+        &-md {
+          font-size: var(--font-caption-md);
+        }
+
+        &-lg {
+          font-size: var(--font-caption-lg);
+        }
+      }
+    }
+  }
+
+  &.weight {
+    &-light {
+      font-weight: var(--font-weight-xlight);
+    }
+    &-regular {
+      font-weight: var(--font-weight-light);
+    }
+    &-semiBold {
+      font-weight: var(--font-weight-semiBold);
+    }
+    &-bold {
+      font-weight: var(--font-weight-bold);
+    }
+    &-xbold {
+      font-weight: var(--font-weight-xbold);
+    }
+    &-black {
+      font-weight: var(--font-weight-black);
+    }
+    &-xblack {
+      font-weight: var(--font-weight-xblack);
+    }
+  }
+
+  &.textShadow {
+    &-default {
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+}

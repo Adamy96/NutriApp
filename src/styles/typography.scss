@@ -2,29 +2,26 @@
   --font-primary-family: 'Poppins', sans-serif;
 
   // Font Sizes
-  --font-xxx-big-size: 5rem;
-  --font-xx-big-size: 3.75rem;
-  --font-x-big-size: 2.5rem;
-  --font-big-size: 2rem;
-  --font-xx-medium-size: 1.75rem;
-  --font-mm-medium-size: 1.625rem;
-  --font-m-medium-size: 1.5rem;
-  --font-x-medium-size: 1.375rem;
-  --font-medium-size: 1.25rem;
-  --font-small-size: 1.125rem;
-  --font-x-small-size: 1rem;
-  --font-xx-small-size: 0.875rem;
-  --font-xxx-small-size: 0.75rem;
-  --font-xxxx-small-size: 0.625rem;
-  --font-sx-small-size: 0.5rem;
+  --font-heading-lg: 2rem; // 32px
+  --font-heading-md: 1.5rem; // 24px
+  --font-heading-sm: 1.25rem; // 20 px
+  --font-heading-xsm: 1.125rem; // 18px
+  --font-text-lg: 1.125rem; // 18px
+  --font-text-md: 1rem; // 16px
+  --font-text-sm: 0.875rem; // 14px
+  --font-text-xsm: 0.75rem; // 12px
+  --font-caption-lg: 0.875rem; // 14px
+  --font-caption-md: 0.75rem; // 12px
+  --font-caption-sm: 0.625rem; // 10px
+  --font-caption-xsm: 0.5rem; // 8px
+
 
   // Font Weights
-  --font-xlight-weight: 200;
-  --font-light-weight: 300;
-  --font-regular-weight: 400;
-  --font-semi-bold-weight: 500;
-  --font-bold-weight: 600;
-  --font-xbold-weight: 700;
-  --font-black-weight: 800;
-  --font-xblack-weight: 900;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-semiBold: 500;
+  --font-weight-bold: 600;
+  --font-weight-xbold: 700;
+  --font-weight-black: 800;
+  --font-weight-xblack: 900;
 }

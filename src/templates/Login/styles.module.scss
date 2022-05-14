@@ -1,0 +1,23 @@
+.login {
+  height: 100vh;
+  background-image: url('/assets/webp/foodBg.webp');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 0 var(--padding-page-horizontal);
+
+  .content {
+    position: absolute;
+    width: calc(100% - 2 * var(--padding-page-horizontal));
+    bottom: var(--spacing-4);
+    color: var(--color-white);
+
+    .description {
+      margin: var(--spacing-2) 0 var(--spacing-3);
+    }
+
+    .appleBtn {
+      margin: var(--spacing-2) 0;
+    }
+  }
+}
