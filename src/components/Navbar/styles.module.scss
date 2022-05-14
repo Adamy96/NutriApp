@@ -1,0 +1,45 @@
+.navbar {
+  height: 64px;
+  width: 100%;
+  margin: 0 calc(-1 * var(--padding-page-horizontal));
+  padding: 0 var(--padding-page-horizontal);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid var(--Navbar-border-color);
+
+  .navItem {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    flex: 1;
+
+    svg {
+      height: 20px;
+    }
+  }
+
+  .default {
+    color: var(--Navbar-item-color-default);
+
+    svg {
+      path {
+        fill: var(--Navbar-item-color-default);
+      }
+    }
+  }
+
+  .active {
+    color: var(--Navbar-item-color-active);
+    border-top: 2px solid var(--Navbar-item-border-color-active);
+
+    svg {
+      path {
+        fill: var(--Navbar-item-color-active);
+      }
+    }
+  }
+}

@@ -5,8 +5,6 @@ const Button = (props: IButton) => {
   const { onClick, children } = props
   const componentClasses = resolveStyles(props)
 
-  console.log(componentClasses)
-
   const handleClick = () => {
     onClick && onClick()
   }

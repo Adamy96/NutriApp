@@ -15,7 +15,7 @@ const Login = () => {
         </Typography>
 
         <Button borderRadius='md' height='lg' variant='cta'>
-          <Link href='/profile'>
+          <Link href='/meals'>
             <a>
               <Typography variant='body' size='sm' weight='bold'>
                 Sign up with email
@@ -25,7 +25,7 @@ const Login = () => {
         </Button>
 
         <Button borderRadius='md' height='lg' variant='white' classes={styles.appleBtn}>
-          <Link href='/profile'>
+          <Link href='/meals'>
             <a>
               <Typography variant='body' size='sm' weight='bold'>
                 Continue with Apple
@@ -34,7 +34,7 @@ const Login = () => {
           </Link>
         </Button>
 
-        <Link href='/profile'>
+        <Link href='/meals'>
           <a>
             <Typography align='center' variant='body' size='sm' weight='semiBold' textShadow='default'>
               Already have an account? Log in
