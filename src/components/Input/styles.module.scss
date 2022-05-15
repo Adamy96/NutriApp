@@ -7,7 +7,7 @@
   height: 42px;
 
   
-  &.searchbarClass {
+  &.searchbar {
     input {
       padding: 0 var(--input-horizontal-padding) 0 calc(2 * var(--input-horizontal-padding) + var(--svg-width));
     }
