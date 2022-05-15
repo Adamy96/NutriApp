@@ -1,0 +1,23 @@
+.addFoodModal {
+  position: relative;
+  background-color: var(--AddFoodModal-background-color);
+  color: var(--AddFoodModal-color);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .input {
+    height: 30px;
+    margin: var(--spacing-2) 0 var(--spacing-1);
+
+    input {
+      font-size: var(--font-caption-sm);
+    }
+  }
+
+  .ctaBtn {
+    margin-bottom: var(--spacing-3);
+  }
+}

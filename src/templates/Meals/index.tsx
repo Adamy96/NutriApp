@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-import { Searchbar, Typography } from "@components"
+import { Input, Typography } from "@components"
 import { useDebounce, useLoading, useMealsPage } from '@hooks'
 import SearchResults from './SearchResults'
 import styles from './styles.module.scss'
@@ -38,11 +38,12 @@ const Meals = () => {
         Meals
       </Typography>
 
-      <Searchbar
+      <Input
         value={inputText}
         onChangeText={setInputText}
         placeholder='Looking for some food information?'
         classes={styles.searchbar}
+        isSearchbar
       />
 
       <SearchResults searchText={searchText} foods={foods} />

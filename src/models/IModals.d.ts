@@ -1,0 +1,1 @@
+type ValidModalsType = 'addFoodModal' | 'none'

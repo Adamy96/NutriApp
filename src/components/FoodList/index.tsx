@@ -4,7 +4,7 @@ import styles from './styles.module.scss'
 const FoodList = ({ foods, cardsPerRow }: FoodListProps) => {
   return (
     <div className={`${styles.foodList} ${styles[`cardsPerRow-${cardsPerRow}`]}`}>
-      {foods.map(food => <FoodCard food={food} />)}
+      {foods.map((food, idx) => <FoodCard food={food} key={idx} />)}
     </div>
   )
 }

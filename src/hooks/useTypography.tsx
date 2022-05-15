@@ -27,13 +27,14 @@ const useTypography = () => {
     return component
   }
 
-  const resolveStyles = ({ align, variant, size, weight, textShadow, classes }: ITypography) => {
+  const resolveStyles = ({ align, variant, size, weight, textShadow, ellipsis, classes }: ITypography) => {
     let classBundle = [
       styles.typography,
       align ? styles[`align-${align}`] : '',
       styles[`variant-${variant}`],
       styles[`size-${size}`],
       weight ? styles[`weight-${weight}`] : '',
+      ellipsis ? styles.ellipsis : '',
       textShadow ? styles[`textShadow-${textShadow}`] : '',
       classes
     ].filter(value => true)

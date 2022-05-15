@@ -32,5 +32,6 @@ interface ITypography {
     'xblack'
   ) = 'regular'
   textShadow?: 'default'
+  ellipsis?: boolean
 }
 

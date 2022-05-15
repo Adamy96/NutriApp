@@ -1,10 +1,18 @@
 import Image from 'next/image'
 import { Typography } from '@components'
+import { useModals } from '@hooks'
 import styles from './styles.module.scss'
 
 const FoodCard = ({ food }: FoodCardProps) => {
+  const { openAddFoodModal } = useModals()
+  
+
+  const handleClick = () => {
+    openAddFoodModal(food)
+  }
+
   return (
-    <div className={styles.foodCard}>
+    <div className={styles.foodCard} onClick={handleClick}>
       <Image
         src={food.image ? food.image : '/assets/webp/noImage.webp'}
         width={150}
@@ -12,7 +20,7 @@ const FoodCard = ({ food }: FoodCardProps) => {
         layout='responsive'
       />
       <div className={styles.content}>
-        <Typography align='center' variant='body' size='sm' weight='semiBold'>
+        <Typography align='center' variant='body' size='sm' weight='semiBold' ellipsis={true}>
           {food.label}
         </Typography>
         <Typography align='center' variant='caption' size='md'>

@@ -1,4 +1,7 @@
 :root {
+  --AddFoodModal-background-color: var(--color-white);
+  --AddFoodModal-color: var(--color-dark);
+
   --Button-cta-background-color: var(--color-green);
   --Button-cta-border-color: transparent;
   --Button-cta-color: var(--color-white);
@@ -11,6 +14,8 @@
   --Navbar-item-color-active: var(--color-dark);
   --Navbar-item-border-color-active: var(--color-green);
   --Navbar-background-color: var(--color-white);
+
+  --Modal-closeSvg-fill: var(--color-dark);
 
   --Searchbar-input-background-color: var(--color-light);
   --Searchbar-input-border-color: transparent;

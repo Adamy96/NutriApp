@@ -1,0 +1,23 @@
+.modals {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+
+  .container {
+    position: fixed;
+    width: calc(100% - 2 * var(--padding-page-horizontal));
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .closeSvg {
+      position: absolute;
+      right: var(--spacing-3);
+      top: var(--spacing-3);
+      fill: var(--Modal-closeSvg-fill);
+      width: 24px;
+    }
+  }
+}
