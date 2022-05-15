@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { createContext, useState } from 'react'
 
 interface IMealsPageState {
@@ -5,7 +6,7 @@ interface IMealsPageState {
   foods: IFood[]
 }
 
-interface IMealsPage {
+interface IContextState {
   mealsPageState: IMealsPageState
   setMealsPageState: React.Dispatch<React.SetStateAction<any>>
 }
@@ -15,10 +16,10 @@ const initialState: IMealsPageState = {
   foods: []
 }
 
-export const MealsPageContext = createContext<IMealsPage | undefined>(undefined)
+export const MealsPageContext = createContext<IContextState>(null)
 
 const ThemeContextProvider = ({ children }: any) => {
-  const [mealsPageState, setMealsPageState] = useState<IMealsPageState>(initialState)
+  const [mealsPageState, setMealsPageState] = useState(initialState)
   return (
     <MealsPageContext.Provider
       value={{

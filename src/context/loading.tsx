@@ -1,10 +1,11 @@
+// @ts-nocheck
 import React, { createContext, useState } from 'react'
 
 interface ILoadingState {
   apiFoodsLoading: boolean
 }
 
-interface ILoading {
+interface IContextState {
   loadingState: ILoadingState
   setLoadingState: React.Dispatch<React.SetStateAction<any>>
 }
@@ -13,10 +14,10 @@ const initialState: ILoadingState = {
   apiFoodsLoading: false
 }
 
-export const LoadingContext = createContext<ILoading | undefined>(undefined)
+export const LoadingContext = createContext<IContextState>(null)
 
 const LoadingContextProvider = ({ children }: any) => {
-  const [loadingState, setLoadingState] = useState<ILoadingState>(initialState)
+  const [loadingState, setLoadingState] = useState(initialState)
   return (
     <LoadingContext.Provider
       value={{
