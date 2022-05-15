@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -15,26 +19,70 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@assets": ["public/assets"],
-      "@assets/*": ["public/assets/*"],
-      "@api": ["src/pages/api"],
-      "@api/*": ["src/pages/api/*"],
-      "@components": ["src/components"],
-      "@components/*": ["src/components/*"],
-      "@context": ["src/context"],
-      "@context/*": ["src/context/*"],
-      "@constants": ["src/constants"],
-      "@pages": ["src/pages"],
-      "@pages/*": ["src/pages/*"],
-      "@styles": ["src/styles"],
-      "@styles/*": ["src/styles/*"],
-      "@helper": ["src/helper"],
-      "@hooks": ["src/hooks"],
-      "@hooks/*": ["src/hooks/*"],
-      "@templates": ["src/templates"],
-      "@templates/*": ["src/templates/*"],
+      "@assets": [
+        "public/assets"
+      ],
+      "@assets/*": [
+        "public/assets/*"
+      ],
+      "@api": [
+        "src/pages/api"
+      ],
+      "@api/*": [
+        "src/pages/api/*"
+      ],
+      "@components": [
+        "src/components"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@context": [
+        "src/context"
+      ],
+      "@context/*": [
+        "src/context/*"
+      ],
+      "@constants": [
+        "src/constants"
+      ],
+      "@pages": [
+        "src/pages"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@styles": [
+        "src/styles"
+      ],
+      "@styles/*": [
+        "src/styles/*"
+      ],
+      "@helper": [
+        "src/helper"
+      ],
+      "@hooks": [
+        "src/hooks"
+      ],
+      "@hooks/*": [
+        "src/hooks/*"
+      ],
+      "@templates": [
+        "src/templates"
+      ],
+      "@templates/*": [
+        "src/templates/*"
+      ]
     },
+    "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next.config.js"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "next.config.js"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
