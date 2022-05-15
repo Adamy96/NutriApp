@@ -10,7 +10,14 @@ const AddFoodModal = ({ food }: AddFoodModalProps) => {
 
   return (
     <div className={styles.addFoodModal}>
-      <Typography align='center' variant='h3' size='sm' weight='bold' ellipsis={true}>
+      <Typography
+        align='center'
+        variant='h3'
+        size='sm'
+        weight='bold'
+        ellipsis={true}
+        classes={styles.title}
+      >
         {food.label}
       </Typography>
       <Image
