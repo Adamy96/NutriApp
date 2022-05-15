@@ -1,5 +1,7 @@
 import Image from 'next/image'
+import { uid } from 'uid'
 import { useState } from 'react'
+import { toast } from 'react-toastify';
 import { Button, Charts, Input, Typography } from '@components'
 import { useChart, useMeals } from '@hooks'
 import styles from './styles.module.scss'
@@ -14,6 +16,14 @@ const AddFoodModal = ({ food }: AddFoodModalProps) => {
   const handleClickAdd = () => {
     if (inputText) {
       addFood(food, +inputText)
+      toast(
+        `Added ${inputText} grams of ${food.label} to your database!`,
+        {
+          type: 'success',
+          toastId: uid(),
+          autoClose: 3500
+        }
+      )
     }
   }
 

@@ -1,11 +1,7 @@
 import type { AppProps } from 'next/app'
-import { Navigation } from '@templates'
-import { Loading, Modals } from '@components'
-import { DEFAULT_FONT_FAMILY, COLOR_DARK } from '@constants'
-import AppContextProvider from '../AppContextProvider'
+import { ToastContainer } from 'react-toastify';
 import {
   Chart as ChartJS,
-  ChartType,
   CategoryScale,
   LinearScale,
   BarElement,
@@ -13,6 +9,12 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
+import 'react-toastify/dist/ReactToastify.css';
+
+import { Navigation } from '@templates'
+import { Loading, Modals } from '@components'
+import { DEFAULT_FONT_FAMILY, COLOR_DARK } from '@constants'
+import AppContextProvider from '../AppContextProvider'
 import '@styles/main.scss'
 
 ChartJS.defaults.font = {
@@ -35,6 +37,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <AppContextProvider>
+      <ToastContainer />
       <div style={{ height: '100%',  position: 'relative'}}>
         <Loading />
         <Modals />
