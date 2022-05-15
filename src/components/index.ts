@@ -1,3 +1,6 @@
 export { default as Button } from './Button'
+export { default as FoodList } from './FoodList'
+export { default as Loading } from './Loading'
 export { default as Navbar } from './Navbar'
+export { default as Searchbar } from './Searchbar'
 export { default as Typography } from './Typography'

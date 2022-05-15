@@ -1,5 +1,5 @@
 .navbar {
-  height: 64px;
+  height: var(--navbar-height);
   width: 100%;
   margin: 0 calc(-1 * var(--padding-page-horizontal));
   padding: 0 var(--padding-page-horizontal);
@@ -9,6 +9,7 @@
   position: fixed;
   bottom: 0;
   border-top: 1px solid var(--Navbar-border-color);
+  background-color: var(--Navbar-background-color);
 
   .navItem {
     display: flex;

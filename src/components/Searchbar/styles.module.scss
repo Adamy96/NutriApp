@@ -1,0 +1,31 @@
+.searchbar {
+  --input-horizontal-padding: var(--spacing-2);
+  --svg-width: 14px;
+
+  position: relative;
+  
+  input {
+    width: 100%;
+    color: var(--Searchbar-input-text-color);
+    padding: 0 var(--input-horizontal-padding) 0 calc(2 * var(--input-horizontal-padding) + var(--svg-width));
+    font-family: var(--font-primary-family);
+    height: 42px;
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--Searchbar-input-border-color);
+    background-color: var(--Searchbar-input-background-color);
+    outline: none;
+
+    &::placeholder {
+      color: var(--Searchbar-input-placeholder-color);
+    }
+  }
+
+  svg {
+    width: 14px;
+    position: absolute;
+    left: var(--input-horizontal-padding);
+    top: 50%;
+    transform: translateY(-50%);
+    fill: var(--Searchbar-input-placeholder-color);
+  }
+}
