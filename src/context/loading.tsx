@@ -4,18 +4,16 @@ interface ILoadingState {
   apiFoodsLoading: boolean
 }
 
-interface ILoading {
-  loadingState: ILoadingState
-  setLoadingState: React.Dispatch<React.SetStateAction<any>>
-}
-
 const initialState: ILoadingState = {
   apiFoodsLoading: false
 }
 
-export const LoadingContext = createContext<ILoading>(null)
+export const LoadingContext = createContext({
+  loadingState: initialState,
+  setLoadingState: useState(initialState)[1]
+})
 
-const LoadingContextProvider = ({ children }) => {
+const LoadingContextProvider = ({ children }: any) => {
   const [loadingState, setLoadingState] = useState<ILoadingState>(initialState)
   return (
     <LoadingContext.Provider
