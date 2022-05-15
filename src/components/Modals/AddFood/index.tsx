@@ -1,12 +1,22 @@
 import Image from 'next/image'
 import { useState } from 'react'
 import { Button, Charts, Input, Typography } from '@components'
-import { useChart } from '@hooks'
+import { useChart, useMeals } from '@hooks'
 import styles from './styles.module.scss'
 
 const AddFoodModal = ({ food }: AddFoodModalProps) => {
   const { parseNutrientsToBarChart } = useChart()
   const [inputText, setInputText] = useState('')
+  const { addedFoods, addFood } = useMeals()
+
+  // console.log(addedFoods)
+  // console.log(food)
+  const handleClickAdd = () => {
+    if (inputText) {
+      addFood(food, +inputText)
+    }
+  }
+
 
   return (
     <div className={styles.addFoodModal}>
@@ -37,7 +47,7 @@ const AddFoodModal = ({ food }: AddFoodModalProps) => {
         type='number'
       />
 
-      <Button variant='cta' borderRadius='md' height='lg' classes={styles.ctaBtn}>
+      <Button variant='cta' borderRadius='md' height='lg' classes={styles.ctaBtn} onClick={handleClickAdd}>
         <Typography variant='body' size='sm' weight='bold'>
             Add to your database
           </Typography>

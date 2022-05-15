@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { Input, Typography } from "@components"
-import { useDebounce, useLoading, useMealsPage } from '@hooks'
+import { useDebounce, useLoading, useMeals } from '@hooks'
 import SearchResults from './SearchResults'
 import styles from './styles.module.scss'
 
@@ -9,8 +9,8 @@ const Meals = () => {
   const {
     searchText: initialInputText,
     foods,
-    updateMealsPageState
-  } = useMealsPage()
+    updateMealsState
+  } = useMeals()
   const { updateFoodApiLoading } = useLoading()
   const [inputText, setInputText] = useState(initialInputText)
   const [searchText, setSearchText] = useState(initialInputText)
@@ -26,7 +26,7 @@ const Meals = () => {
       axios.get(`${process.env.NextUrl}/api/getFood?foodName=${searchText}`)
         .then((res) => {
           updateFoodApiLoading(false)
-          updateMealsPageState(searchText, res.data.foods)
+          updateMealsState(searchText, res.data.foods)
         })
         .catch(err => updateFoodApiLoading(false))
     }

@@ -1,9 +1,10 @@
 import BarChart from './Bar'
+import PieChart from './Pie'
 
 const Charts = ({ variant, data, classes }: ChartProps) => {
   const contentType = {
     bar: <BarChart data={data} classes={classes} />,
-    pie: null
+    pie: <PieChart />
   }
 
   return contentType[variant]

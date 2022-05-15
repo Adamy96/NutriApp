@@ -1,7 +1,7 @@
-import { LoadingProvider, MealsPageProvider, ModalsProvider } from '@context'
+import { LoadingProvider, MealsProvider, ModalsProvider } from '@context'
 import { combineComponents } from '@helper'
 
-const providers = [LoadingProvider, MealsPageProvider, ModalsProvider]
+const providers = [LoadingProvider, MealsProvider, ModalsProvider]
 
 const AppContextProvider = combineComponents(...providers)
 export default AppContextProvider

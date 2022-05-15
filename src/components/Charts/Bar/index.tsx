@@ -37,6 +37,21 @@ const BarChart = ({ data, classes }: BarChartProps) => {
       }
     ],
   };
+
+  // const dataSets = data.map((datasetData) => ({
+  //   label: datasetData.datasetLabel,
+  //   data: datasetData.data,
+  //   backgroundColor: [...datasetData.backgroundColor],
+  //   datalabels: {
+  //     color: COLOR_DARK,
+  //     anchor: 'start',
+  //     align: 'end',
+  //     offset: 10,
+  //     formatter: function(value: any, context: any) {
+  //       return context.chart.data.labels[context.dataIndex];
+  //     }
+  //   }
+  // }))
   
   return (
     <div className={classes}>
