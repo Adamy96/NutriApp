@@ -21,7 +21,7 @@ const Meals = () => {
   }, [inputText])
 
   useEffect(() => {
-    if (searchText) {
+    if (searchText && searchText !== initialInputText) {
       updateFoodApiLoading(true)
       axios.get(`${process.env.NextUrl}/api/getFood?foodName=${searchText}`)
         .then((res) => {
