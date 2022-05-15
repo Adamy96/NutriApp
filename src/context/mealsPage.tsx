@@ -5,15 +5,17 @@ interface IMealsPageState {
   foods: IFood[]
 }
 
+interface IMealsPage {
+  mealsPageState: IMealsPageState
+  setMealsPageState: React.Dispatch<React.SetStateAction<any>>
+}
+
 const initialState: IMealsPageState = {
   searchText: '',
   foods: []
 }
 
-export const MealsPageContext = createContext({
-  mealsPageState: initialState,
-  setMealsPageState: useState(initialState)[1]
-})
+export const MealsPageContext = createContext<IMealsPage | undefined>(undefined)
 
 const ThemeContextProvider = ({ children }: any) => {
   const [mealsPageState, setMealsPageState] = useState<IMealsPageState>(initialState)

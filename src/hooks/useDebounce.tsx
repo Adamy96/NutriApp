@@ -1,9 +1,10 @@
+// @ts-nocheck
 import { useRef } from 'react'
 
-const useDebounce = (fn: any, delay: number) => {
+const useDebounce = (fn, delay) => {
   const timeoutRef = useRef(null)
 
-  const debouncedFn = (...args: any[]) => {
+  const debouncedFn = (...args) => {
     window.clearTimeout(timeoutRef.current)
     timeoutRef.current = window.setTimeout(() => {
       fn(...args)

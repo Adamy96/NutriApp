@@ -4,7 +4,6 @@ import { Searchbar, Typography } from "@components"
 import { useDebounce, useLoading, useMealsPage } from '@hooks'
 import SearchResults from './SearchResults'
 import styles from './styles.module.scss'
-import { resolve } from 'node:path/win32'
 
 const Meals = () => {
   const {
