@@ -1,5 +1,6 @@
 export { default as useButton } from './useButton'
 export { default as useChart } from './useChart'
+export { default as useClickOutside } from './useClickOutside'
 export { default as useDebounce } from './useDebounce'
 export { default as useLoading } from './useLoading'
 export { default as useMeals } from './useMeals'
