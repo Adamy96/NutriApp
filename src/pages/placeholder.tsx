@@ -1,5 +1,5 @@
 const Placeholder = () => {
-  return <p>Placeholder page</p>
+  return <div></div>
 }
 
 export default Placeholder

@@ -7,6 +7,15 @@ const useChart = () => {
     PROCNT: 'Protein'
   }
 
+  const possibleColors = [
+    '#01BEFE',
+    '#FFDD00',
+    '#FF7D00',
+    '#FF006D',
+    '#ADFF02',
+    '#8F00FF'
+  ]
+
   const parseNutrientsToBarChart = (nutrients: INutrients) => {
     return {
       labels: (Object.keys(nutrients) as Array<keyof typeof translatedNutrientNames>)
@@ -28,11 +37,11 @@ const useChart = () => {
     let labels: string[] = []
     let data: number[] = []
     let backgroundColor: string[] = []
-    
-    addedFoods.forEach(addedFood => {
+
+    addedFoods.forEach((addedFood, idx) => {
       labels.push(addedFood.label)
       data.push(addedFood.quantity * addedFood.nutrients.ENERC_KCAL / 100)
-      backgroundColor.push(`#${Math.floor((0.5 + Math.random())*8388607).toString(16)}`)
+      backgroundColor.push(possibleColors[idx % 6])
     })
     
     return {

@@ -1,5 +1,6 @@
 export { default as Button } from './Button'
 export { default as Chart } from './Chart'
+export { default as Configs } from './Configs'
 export { default as Dropdown } from './Dropdown'
 export { default as FoodList } from './FoodList'
 export { default as Loading } from './Loading'

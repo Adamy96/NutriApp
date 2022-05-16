@@ -33,7 +33,6 @@ const BarChart = ({
         data: data.data,
         backgroundColor: [...data.backgroundColor],
         datalabels: {
-          color: COLOR_DARK,
           anchor: 'start',
           align: 'end',
           offset: 10,

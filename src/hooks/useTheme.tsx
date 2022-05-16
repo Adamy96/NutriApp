@@ -31,6 +31,7 @@ const useTheme = () => {
   }
 
   return {
+    currentTheme: themeState.theme,
     toggleTheme,
     themeState
   }
