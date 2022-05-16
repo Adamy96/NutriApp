@@ -3,7 +3,14 @@ import { Bar } from 'react-chartjs-2';
 import { COLOR_DARK } from '@constants'
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 
-const BarChart = ({ data, classes }: BarChartProps) => {
+const BarChart = ({
+  data,
+  classes,
+  height,
+  width,
+  fillWidth,
+  labelPosition
+}: IChartProps) => {
   const options = {
     indexAxis: 'y' as const,
     responsive: true,
@@ -58,8 +65,8 @@ const BarChart = ({ data, classes }: BarChartProps) => {
       <Bar
         data={chartData}
         options={options}
-        height={190}
-        width={300}
+        height={height}
+        width={width}
         plugins={[ChartDataLabels]}
       />
     </div>
@@ -67,8 +74,3 @@ const BarChart = ({ data, classes }: BarChartProps) => {
 }
 
 export default BarChart
-
-interface BarChartProps {
-  data: any
-  classes?: string
-}

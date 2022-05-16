@@ -2,17 +2,15 @@ import Image from 'next/image'
 import { uid } from 'uid'
 import { useState } from 'react'
 import { toast } from 'react-toastify';
-import { Button, Charts, Input, Typography } from '@components'
+import { Button, Chart, Input, Typography } from '@components'
 import { useChart, useMeals } from '@hooks'
 import styles from './styles.module.scss'
 
 const AddFoodModal = ({ food }: AddFoodModalProps) => {
   const { parseNutrientsToBarChart } = useChart()
   const [inputText, setInputText] = useState('')
-  const { addedFoods, addFood } = useMeals()
+  const { addFood } = useMeals()
 
-  // console.log(addedFoods)
-  // console.log(food)
   const handleClickAdd = () => {
     if (inputText) {
       addFood(food, +inputText)
@@ -26,7 +24,6 @@ const AddFoodModal = ({ food }: AddFoodModalProps) => {
       )
     }
   }
-
 
   return (
     <div className={styles.addFoodModal}>
@@ -47,7 +44,7 @@ const AddFoodModal = ({ food }: AddFoodModalProps) => {
         layout='intrinsic'
       />
       
-      <Charts variant='bar' data={parseNutrientsToBarChart(food.nutrients)} />
+      <Chart variant='bar' data={parseNutrientsToBarChart(food.nutrients)} />
       
       <Input
         onChangeText={setInputText}

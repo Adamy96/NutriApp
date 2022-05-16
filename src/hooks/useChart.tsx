@@ -24,6 +24,24 @@ const useChart = () => {
     }
   }
 
+  const parseCaloriesPerAddedFood = (addedFoods: IAddedFood[]) => {
+    let labels: string[] = []
+    let data: number[] = []
+    let backgroundColor: string[] = []
+    
+    addedFoods.forEach(addedFood => {
+      labels.push(addedFood.label)
+      data.push(addedFood.quantity * addedFood.nutrients.ENERC_KCAL / 100)
+      backgroundColor.push(`#${Math.floor((0.5 + Math.random())*8388607).toString(16)}`)
+    })
+    
+    return {
+      labels,
+      data,
+      backgroundColor
+    }
+  }
+
   const parseDatasetPerFood = (nutrients: INutrients[]) => {
     return nutrients.map(nutrient => ({
       labels: (Object.keys(nutrient) as Array<keyof typeof translatedNutrientNames>)
@@ -41,7 +59,7 @@ const useChart = () => {
     }))
   }
 
-  return { parseNutrientsToBarChart, parseDatasetPerFood }
+  return { parseNutrientsToBarChart, parseCaloriesPerAddedFood, parseDatasetPerFood }
 }
 
 export default useChart

@@ -1,3 +1,7 @@
+interface IAddedFood extends IFood {
+  quantity: number
+}
+
 interface INutrients {
   CHOCDF: number
   ENERC_KCAL: number

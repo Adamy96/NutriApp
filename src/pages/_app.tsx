@@ -2,6 +2,7 @@ import type { AppProps } from 'next/app'
 import { ToastContainer } from 'react-toastify';
 import {
   Chart as ChartJS,
+  ArcElement,
   CategoryScale,
   LinearScale,
   BarElement,
@@ -25,6 +26,7 @@ ChartJS.defaults.font = {
 }
 ChartJS.defaults.color = COLOR_DARK
 ChartJS.register(
+  ArcElement,
   CategoryScale,
   LinearScale,
   BarElement,

@@ -14,11 +14,9 @@ const useMeals = () => {
 
   const addFood = (food: IFood, quantity: number) => {
     let addedFoods = mealsState.addedFoods
-    
     const foodAlreadyAdded = mealsState.addedFoods.find(addedFood => (
       addedFood.foodId === food.foodId)
     )
-
     const incrementedAddedFoods = addedFoods.map(addedFood => {
       if (addedFood.foodId === food.foodId) {
         return {
@@ -39,10 +37,24 @@ const useMeals = () => {
     })
   }
 
+  const getAddedFoodNames = (): string[] => {
+    return mealsState.addedFoods.map(addedFood => addedFood.label)
+  }
+
+  const getTotalCalories = (): number => {
+    if (!mealsState.addedFoods.length) return 0
+
+    return mealsState.addedFoods.reduce((acc, addedFood) => {
+      return (addedFood.quantity * addedFood.nutrients.ENERC_KCAL / 100) + acc
+    }, 0)
+  }
+
   return {
     searchText: mealsState.searchText,
     foods: mealsState.foods,
     addedFoods: mealsState.addedFoods,
+    getTotalCalories,
+    getAddedFoodNames,
     updateMealsState,
     addFood
   }

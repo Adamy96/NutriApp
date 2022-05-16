@@ -1,14 +1,10 @@
 // @ts-nocheck
 import React, { createContext, useState } from 'react'
 
-interface IAddedFoods extends IFood {
-  quantity: number
-}
-
 interface IMealsState {
   searchText: string,
   foods: IFood[],
-  addedFoods: IAddedFoods[]
+  addedFoods: IAddedFood[]
 }
 
 interface IContextState {
