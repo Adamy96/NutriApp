@@ -1,7 +1,5 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Stack: NextJS, ChartJS, Typescript, Scss, CssModules with Context as State Manager.
-
 ## Running the application
 
 Download the project or clone it to a local folder
@@ -35,3 +33,5 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 Obs.: This project was developed in less than 48 hours, so I didn't have time to create the responsiveness for other resolutions other than mobile.
+
+Stack: NextJS, ChartJS, Typescript, Scss, CssModules with Context as State Manager.
