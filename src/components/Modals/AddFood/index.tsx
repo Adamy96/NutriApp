@@ -15,7 +15,7 @@ const AddFoodModal = ({ food }: AddFoodModalProps) => {
     if (inputText) {
       addFood(food, +inputText)
       toast(
-        `Added ${inputText} grams of ${food.label} to your database!`,
+        `Added ${inputText} grams of ${food.label} to your database! Check it out at Statistics bar`,
         {
           type: 'success',
           toastId: uid(),

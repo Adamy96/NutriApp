@@ -1,5 +1,7 @@
-const Home = () => {
-  return <p>Home</p>
+import { Home } from '@templates'
+
+const Homepage = () => {
+  return <Home />
 }
 
-export default Home
+export default Homepage

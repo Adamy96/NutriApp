@@ -23,7 +23,7 @@ const FoodCard = ({ food }: FoodCardProps) => {
         <Typography align='center' variant='body' size='sm' weight='semiBold' ellipsis={true}>
           {food.label}
         </Typography>
-        <Typography align='center' variant='caption' size='md'>
+        <Typography align='center' variant='caption' size='md' classes={styles.moreInformation}>
           More information
         </Typography>
       </div>

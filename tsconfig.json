@@ -58,6 +58,9 @@
       "@styles/*": [
         "src/styles/*"
       ],
+      "@themes": [
+        "src/themes"
+      ],
       "@helper": [
         "src/helper"
       ],

@@ -4,7 +4,7 @@ import { Navbar } from '@components'
 import styles from './styles.module.scss'
 
 const Navigation = ({ children }: any) => {
-  const navigationPages = ['/home', '/meals', '/statistics', '/components']
+  const navigationPages = ['/home', '/meals', '/statistics', '/placeholder']
   const router = useRouter()
 
   if (!navigationPages.includes(router.pathname)) {

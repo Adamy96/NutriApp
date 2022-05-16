@@ -1,6 +1,7 @@
 :root {
   --toastify-color-progress-light: var(--color-green);
 
+  --AddFoodModal-border-color: transparent;
   --AddFoodModal-background-color: var(--color-white);
   --AddFoodModal-color: var(--color-dark);
 
@@ -10,6 +11,9 @@
   --Button-white-background-color: var(--color-white);
   --Button-white-border-color: transparent;
   --Button-white-color: var(--color-dark);
+
+  --Page-text-color: var(--color-dark);
+  --Page-background-color: var(--color-white);
 
   --Navbar-border-color: var(--color-light);
   --Navbar-item-color-default: var(--color-grey-dark);
@@ -28,4 +32,6 @@
 
   --FoodCard-background-color: var(--color-white);
   --FoodCard-color: var(--color-dark);
+  --FoodCard-border-color: transparent;
+  --FoodCard-moreInformation-color: var(--color-dark);
 }

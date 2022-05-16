@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { HomeSvg, StatisticsSvg, TasksSvg } from '@assets/svg'
+import { HomeSvg, StatisticsSvg, TasksSvg, ProfileSvg } from '@assets/svg'
 import { Typography } from '@components'
 import styles from './styles.module.scss'
 import { useRouter } from 'next/router'
@@ -24,9 +24,9 @@ const Navbar = () => {
       url: '/statistics'
     },
     {
-      title: 'Components',
-      icon: <StatisticsSvg />,
-      url: '/components'
+      title: 'Placeholder',
+      icon: <ProfileSvg />,
+      url: '/placeholder'
     }
   ]
 
