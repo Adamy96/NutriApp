@@ -5,12 +5,12 @@ const Button = (props: IButton) => {
   const { onClick, children } = props
   const componentClasses = resolveStyles(props)
 
-  const handleClick = () => {
-    onClick && onClick()
+  const handleClick = (e: any) => {
+    onClick && onClick(e)
   }
   
   return (
-    <button className={componentClasses} onClick={handleClick}>
+    <button className={componentClasses} onClick={(e) => handleClick(e)}>
       {children}
     </button>
   )
