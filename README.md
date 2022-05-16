@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+Stack: NextJS, ChartJS, Typescript, Scss, CssModules with Context as State Manager.
+
 ## Running the application
 
 Download the project or clone it to a local folder
